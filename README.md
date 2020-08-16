@@ -1,4 +1,6 @@
-# bappy0x-tk
+# jetradio-tk
+
+> You can listen LIVE at [listen.jetradio.tk](https://listen.jetradio.tk)
 
 [![Website](https://img.shields.io/website?down_color=Red&down_message=Offline&up_color=Green&up_message=Online&url=https%3A%2F%2Fjetradio.tk)](https://jetradio.tk)
 [![Discord](https://img.shields.io/discord/741257896670658671?logo=discord)](https://discord.gg/BQMtc5S)

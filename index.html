@@ -1,8 +1,240 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-	<title>Jet Radio</title>
+	<meta charset='utf-8'>
+
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <meta property="og:title" content="Jet Radio - "This is Music"" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jetradio.tk/" />
+    <!--<meta property="og:image" content="public/img/logo_red.jpg" />-->
+    <meta property="og:description" content="" />
+
+	<title>Jet Radio - "This is Music"</title>
+
+    <link rel="shortcut icon" href="public/img/favicon.ico">
+    <link rel="stylesheet" href="public/css/style.css">
+
+    <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js" integrity="sha256-5oApc/wMda1ntIEK4qoWJ4YItnV4fBHMwywunj8gPqc=" crossorigin="anonymous"></script>-->
+
+    <script src="public/js/main.js"></script>
 </head>
+
 <body>
-	<h1>Test</h1>
+	<div id="top">
+		<div class="_container">
+			<div class="container-fluid">
+				<div class="row mx-auto">
+					<div class="col-md-5 col-lg-4 col-xl-3 p-3 m-auto">
+						<img class="rounded-lg w-100" src="public/img/img.png"/>
+					</div>
+					<div class="col-md-7 col-lg-8 col-xl-9 p-0 my-auto">
+						<h2 class="text-center text-md-left text-light">Jet Radio - "This is Music"</h2>
+						<div id="live-details" class="container-fluid ml-sm-auto ml-md-0 bg-light rounded-lg">
+							<h1 id="live-status" class="text-right">WE'RE LIVE!</h1>
+							<h3>Host:</h3>
+							<div class="row">
+								<div class="col-4 col-sm-3 col-md-2">
+									<img class="rounded-lg" src="public/img/img.png" width="100%"/>
+								</div>
+								<div class="col-8 col-sm-9 col-md-10 pl-3">
+									<h2 id="live-host-name">Nick</h2>
+									<p id="live-host-times">From 20:00 to 22:00</p>
+								</div>
+							</div>
+							<div class="row">
+								<h3>Feature:</h3>
+							</div>
+							<div class="row pl-3">
+								<h2 id="live-feature">THE 2020'S GRIME SET</h2>
+							</div>
+							<p class="text-right">Scroll down for more...</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<ul class="_navbar my-2 px-3">
+						<li><a href="#" class="active">HOME</a></li>
+						<li><a href="#">TIMETABLE</a></li>
+						<li><a href="#">ABOUT US</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="content" class="py-3 mx-auto">
+		<div class="container-fluid mx-auto">
+			<div class="row">
+				<div class="col mb-3">
+					<div id="player" class="container-fluid bg-light rounded-lg">
+						<h1>PLAYER WILL GO HERE</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div id="song-now" class="container-fluid bg-light rounded-lg mb-3">
+						<div class="row">
+							<h1 class="pl-2 m-0">RIGHT NOW:</h1>
+						</div>
+						<div class="row container-fluid">
+							<div class="row py-2 song">
+								<div class="col-6 col-lg-4">
+									<div class="song-cover">
+										<img id="song-now-cover" class="rounded-lg" src="public/img/img.png" width="100%"/>
+										<p class="loading">Loading...</p>
+										<a href="https://open.spotify.com/track/0HXnDHMKc5VQNJ1xLHx9f8?si=cqMumRKfRYutM_r3Uhw1Zw" target="_blank"><i class="fab fa-spotify"></i></a>
+									</div>
+								</div>
+								<div class="col-6 col-lg-8">
+									<h2 id="song-now-title">All Ganja Man</h2>
+									<h4 id="song-now-artist" class="font-weight-bold">Serum, $pyda</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container-fluid bg-light rounded-lg">
+						<div class="row">
+							<h1 class="pl-2 m-0">THE MANDEM:</h1>
+						</div>
+						<div class="row container-fluid mx-auto">
+							<div class="col-sm-6 col-xl-3">
+								<img class="rounded-lg" src="public/img/img.png" width="100%"/>
+								<p>Josh<br>"Bappy0X"</p>
+							</div>
+							<div class="col-sm-6 col-xl-3">
+								<img class="rounded-lg" src="public/img/img.png" width="100%"/>
+								<p>Nick</p>
+							</div>
+							<div class="col-sm-6 col-xl-3">
+								<img class="rounded-lg" src="public/img/img.png" width="100%"/>
+								<p>"Enty"</p>
+							</div>
+							<div class="col-sm-6 col-xl-3">
+								<img class="rounded-lg" src="public/img/img.png" width="100%"/>
+								<p>"Dark"</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-6 mb-3">
+					<div id="song-history" class="container-fluid bg-light rounded-lg">
+						<div class="row">
+							<h1 class="pl-2 m-0">RECENT TRACKS:</h1>
+						</div>
+						<div class="row py-2 song">
+							<div class="col-4 col-md-6 col-lg-4 col-xl-3">
+								<div class="song-cover">
+									<img id="song-1-cover" class="rounded-lg" src="public/img/img.png" width="100%"/>
+									<p class="loading">Loading...</p>
+									<a href="https://open.spotify.com/track/0HXnDHMKc5VQNJ1xLHx9f8?si=cqMumRKfRYutM_r3Uhw1Zw" target="_blank"><i class="fab fa-spotify"></i></a>
+								</div>
+							</div>
+							<div class="col-8 col-md-6 col-lg-8 col-xl-9">
+								<h3 id="song-1-title">Pay for Thrills</h3>
+								<h4 id="song-1-artist" class="font-weight-bold">Zero</h4>
+								<p id="song-1-timestamp">__ Ago</p>
+							</div>
+						</div>
+
+						<!--START HERE-->
+						<div class="row py-2 song">
+							<div class="col-4 col-md-6 col-lg-4 col-xl-3">
+								<div class="song-cover">
+									<img id="song-1-cover" class="rounded-lg" src="public/img/img.png" width="100%"/>
+									<p class="loading">Loading...</p>
+									<a href="https://open.spotify.com/track/0HXnDHMKc5VQNJ1xLHx9f8?si=cqMumRKfRYutM_r3Uhw1Zw" target="_blank"><i class="fab fa-spotify"></i></a>
+								</div>
+							</div>
+							<div class="col-8 col-md-6 col-lg-8 col-xl-9">
+								<h3 id="song-1-title">Pay for Thrills</h3>
+								<h4 id="song-1-artist" class="font-weight-bold">Zero</h4>
+								<p id="song-1-timestamp">__ Ago</p>
+							</div>
+						</div>
+						<div class="row py-2 song">
+							<div class="col-4 col-md-6 col-lg-4 col-xl-3">
+								<div class="song-cover">
+									<img id="song-1-cover" class="rounded-lg" src="public/img/img.png" width="100%"/>
+									<p class="loading">Loading...</p>
+									<a href="https://open.spotify.com/track/0HXnDHMKc5VQNJ1xLHx9f8?si=cqMumRKfRYutM_r3Uhw1Zw" target="_blank"><i class="fab fa-spotify"></i></a>
+								</div>
+							</div>
+							<div class="col-8 col-md-6 col-lg-8 col-xl-9">
+								<h3 id="song-1-title">Pay for Thrills</h3>
+								<h4 id="song-1-artist" class="font-weight-bold">Zero</h4>
+								<p id="song-1-timestamp">__ Ago</p>
+							</div>
+						</div>
+						<div class="row py-2 song">
+							<div class="col-4 col-md-6 col-lg-4 col-xl-3">
+								<div class="song-cover">
+									<img id="song-1-cover" class="rounded-lg" src="public/img/img.png" width="100%"/>
+									<p class="loading">Loading...</p>
+									<a href="https://open.spotify.com/track/0HXnDHMKc5VQNJ1xLHx9f8?si=cqMumRKfRYutM_r3Uhw1Zw" target="_blank"><i class="fab fa-spotify"></i></a>
+								</div>
+							</div>
+							<div class="col-8 col-md-6 col-lg-8 col-xl-9">
+								<h3 id="song-1-title">Pay for Thrills</h3>
+								<h4 id="song-1-artist" class="font-weight-bold">Zero</h4>
+								<p id="song-1-timestamp">__ Ago</p>
+							</div>
+						</div>
+						<div class="row py-2 song">
+							<div class="col-4 col-md-6 col-lg-4 col-xl-3">
+								<div class="song-cover">
+									<img id="song-1-cover" class="rounded-lg" src="public/img/img.png" width="100%"/>
+									<p class="loading">Loading...</p>
+									<a href="https://open.spotify.com/track/0HXnDHMKc5VQNJ1xLHx9f8?si=cqMumRKfRYutM_r3Uhw1Zw" target="_blank"><i class="fab fa-spotify"></i></a>
+								</div>
+							</div>
+							<div class="col-8 col-md-6 col-lg-8 col-xl-9">
+								<h3 id="song-1-title">Pay for Thrills</h3>
+								<h4 id="song-1-artist" class="font-weight-bold">Zero</h4>
+								<p id="song-1-timestamp">__ Ago</p>
+							</div>
+						</div>
+						<!--END HERE-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer" class="mx-auto text-light pt-3">
+		<div class="_container container-fluid">
+			<div class="row">
+				<div class="col-12 col-md-8">
+					<h3>Jet Radio, from Jet Corp</h3>
+					<p>Jet Radio is a sub organisation of the Jet Corporation, owned by "enty8".</p>
+				</div>
+				<div class="col-12 col-md-4">
+					<h3>Find us Online</h3>
+					<ul class="footer-social">
+						<li><a href="https://github.com/Bappy0X"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="https://discord.gg/BQMtc5S"><i class="fab fa-discord"></i></a></li>
+						<li><a href="mailto:jetradio.fm@gmail.com" target="_blank"><i class="far fa-envelope"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<hr class="border-light w-50">
+			<div class="row pb-3">
+				<div class="mx-auto text-center">
+					<h5>Made with <i class="fas fa-heart align-middle"></i> by <a href="https://bappy0x.tk">Bappy0X</a>.</h5>
+					<h4>Copyright © Jet Corp 2020.</h4>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
+
 </html>

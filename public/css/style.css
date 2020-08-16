@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "hooge_05_54"; /*a name to be used later*/
+    src: url("/public/fonts/hooge_05_54.ttf"); /*URL to font*/
+}
+
+html, body {
+    font-family: "hooge_05_54" !important;
+    background-color: #424242 !important;
+}
+
+#top {
+    border-bottom: 5px dashed #424242 !important;
+}
+
+#top, #footer {
+    background-color: #323232;
+}
+
+#content {
+    width: 80vw;
+}
+
+._container {
+    width: 75% !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+._navbar, .footer-social {
+    font-size: 2rem;
+    list-style: none;
+    padding-left: 0;
+}
+._navbar>li, .footer-social>li {
+    float: left;
+    padding: 0 10px;
+}
+
+.footer-social>li:first-child {
+    padding-left: 0;
+}
+
+a{
+    color: white !important;
+}
+._navbar>li>a.active{
+    border-bottom: 2px solid white;
+}
+._navbar>li>a:not(.active){
+    color: #c0c0c0 !important;
+}
+a:hover {
+    text-decoration: none !important;
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+.song-cover {
+    position: relative;
+}
+.song-cover>.loading {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.song-cover .fa-spotify {
+    color: #1ed760;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+}
+
+#footer {
+    border-top: 5px dashed #424242 !important;
+}
+.fa-heart {
+    font-size: 2rem;
+    color: red;
+}
+
+.rounded-lg:not(img) {
+    border-top: 2px solid #d2d2d2 !important;
+}
+
+#live-details {
+    max-width: 500px;
+}
+#live-details *{
+    padding: 0;
+    margin: 0;
+}
+#live-status {
+    color: red;
+}
