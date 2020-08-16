@@ -16,7 +16,7 @@ This is hosted via GitHub Pages.
 
 ## Licensing
 
-[![License](https://img.shields.io/github/license/Bappy0X/jetradio-tk?style=for-the-badge)](LICENSE)
+[![License](https://img.shields.io/github/license/Bappy0X/jetradio-tk)](LICENSE)
 
 Licensed under the Creative Commons Zero v1.0 Universal license.
 
