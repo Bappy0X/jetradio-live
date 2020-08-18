@@ -14,7 +14,7 @@ html, body {
     background-color: #323232;
 }
 
-#content {
+.content {
     width: 80vw;
 }
 
@@ -22,12 +22,6 @@ html, body {
     width: 75% !important;
     margin-left: auto;
     margin-right: auto;
-}
-
-#live-status {
-    position: absolute;
-    top: 4px;
-    right: 12px;
 }
 
 ._navbar, .footer-social {
@@ -53,7 +47,7 @@ a{
 ._navbar>li>a:not(.active){
     color: #c0c0c0 !important;
 }
-a:hover {
+a:hover:not(i .fa) {
     text-decoration: none !important;
     border-bottom: 2px solid white;
     color: white;
@@ -76,6 +70,11 @@ a:hover {
     right: 8px;
 }
 
+#discord-invite {
+    background-color: #7289da;
+    border-top: 2px solid #3f56a7 !important;
+}
+
 #footer {
     border-top: 5px dashed #424242 !important;
 }
@@ -84,8 +83,8 @@ a:hover {
     color: red;
 }
 
-.rounded-lg:not(img) {
-    border-top: 2px solid #dfdfdf !important;
+.rounded-lg:not(img):not(#discord-invite) {
+    border-top: 2px solid #e6e6e6 !important;
 }
 
 #live-details {
@@ -95,6 +94,10 @@ a:hover {
     padding: 0;
     margin: 0;
 }
+
 #live-status {
-    color: red;
+    position: absolute;
+    top: 4px;
+    right: 12px;
+    color: lightgray;
 }
