@@ -35,7 +35,7 @@
 			<div class="container-fluid">
 				<div class="row mx-auto">
 					<div class="col-md-5 col-lg-4 col-xl-2 p-3 m-auto">
-						<img class="rounded-lg w-100" src="public/img/img.png"/>
+						<img class="rounded-lg w-100" src="public/img/Logo.png"/>
 					</div>
 					<div class="col-md-7 col-lg-8 col-xl-10 p-0 my-auto">
 						<h2 class="text-center text-md-left text-light">Jet Radio - "This is Music"</h2>
@@ -44,7 +44,7 @@
 							<h3>Host:</h3>
 							<div class="row">
 								<div class="col-4 col-lg-2">
-									<img class="rounded-lg" src="public/img/img.png" width="100%"/>
+									<img class="rounded-lg" src="public/img/presenters/Nick.jpg" width="100%"/>
 								</div>
 								<div class="col-8 col-lg-10 pl-3">
 									<h2 id="live-host-name">Nick</h2>
@@ -71,16 +71,18 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="content py-3 mx-auto">
 		<div class="container-fluid mx-auto">
 			<div class="row mb-3">
 				<div class="col">
 					<div id="player" class="container-fluid bg-light rounded-lg text-center">
-						<h1>LISTEN TO JET RADIO:</h1>
-						<audio controls class="py-1">
+						<h1 class="my-1">LISTEN TO JET RADIO:</h1>
+						<audio controls>
 							<source src="https://listen.jetradio.live" type="audio/mpeg">
 							Your browser does not support the audio element.
-						</audio> 
+						</audio><br/>
+						<button type="button" class="btn btn-secondary my-2" data-toggle="modal" data-target="#requestModal">Send a Request</button>
 					</div>
 				</div>
 			</div>
@@ -132,7 +134,7 @@
 								<h5>Josh<br>"Bappy0X"</h5>
 							</div>
 							<div class="col-sm-6 col-xl-3">
-								<img class="rounded-lg" src="public/img/img.png" width="100%"/>
+								<img class="rounded-lg" src="public/img/presenters/Nick.jpg" width="100%"/>
 								<h5>Nick</h5>
 							</div>
 							<div class="col-sm-6 col-xl-3">
@@ -140,8 +142,8 @@
 								<h5>"Enty"</h5>
 							</div>
 							<div class="col-sm-6 col-xl-3">
-								<img class="rounded-lg" src="public/img/img.png" width="100%"/>
-								<h5>"Dark"</h5>
+								<img class="rounded-lg" src="public/img/presenters/Rose.jpg" width="100%"/>
+								<h5>Rose<br>"Watery"</h5>
 							</div>
 						</div>
 					</div>
@@ -230,6 +232,42 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="requestModal" class="modal fade" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Send a Request to Jet Radio</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="request-type" class="col-form-label">Request Type:</label>
+							<select id="request-type" class="custom-select mr-sm-2" >
+								<option value="0" selected>Choose...</option>
+								<option value="shoutout">Shoutout</option>
+								<option value="play">Song</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="request-name" class="col-form-label">Name:</label>
+							<input id="request-name" type="text" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label for="request-message" class="col-form-label">Message:</label>
+							<textarea id="request-message" class="form-control"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					<button id="request-submit" type="button" class="btn btn-success">Send message</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div id="footer" class="mx-auto text-light pt-3">
 		<div class="_container container-fluid">
 			<div class="row">

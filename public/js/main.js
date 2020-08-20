@@ -1,4 +1,20 @@
-$(document).ready(function() {
+function modalError(type, errorText) {
+    $("#requestModal .modal-body").append(`
+        <div class="alert alert-${type}" role="alert">
+            An Error Occured: ${errorText}
+        </div>
+    `);
+
+    $(`#requestModal .modal-body>.alert-${type}`)
+        .hide()
+        .slideDown();
+
+    setTimeout(function() {
+        $(`#requestModal .modal-body>.alert-${type}`).slideUp(function() { this.remove(); });
+    }, 3000);
+};
+
+function updateStats() {
     $.ajax("https://listen.jetradio.live/status-json.xsl")
     .done(data => {
         console.log(data);
@@ -13,6 +29,50 @@ $(document).ready(function() {
         }
     })
     .fail((_, textStatus) => {
-        console.error(`Notifications GET failed: "${textStatus}".`);
+        console.error(`Radio status GET failed: "${textStatus}".`);
+    });
+}
+
+$(document).ready(function() {
+    updateStats()
+    setInterval(updateStats, 30000);
+
+    var debounce = false
+
+    $("#request-submit").click(function() {
+        if (debounce) { return };
+        debounce = true
+
+        var request_type = $("#request-type").val(),
+            request_name = $("#request-name").val(),
+            request_message = $("#request-message").val();
+
+        if (!["shoutout", "play"].includes(request_type)) {
+            modalError("danger", "Please select a request type!");
+        } else if (request_name.length < 3) {
+            modalError("danger", "Please enter a longer name! (Atleast 3 characters.)");
+        } else if (request_message.length < 10) {
+            modalError("danger", "Please enter a longer message! (Atleast 10 characters.)");
+        } else {
+            $.ajax({
+                type: "POST",
+                url: "https://api.bappy0x.tk/jetradio/request",
+                data: JSON.stringify({ type: request_type, name: request_name, message: request_message }),
+                contentType: "application/json",
+                dataType: "json"
+            })
+            .done(data => {
+                if (data.success) {
+                    modalError("success", "Successfully Sent!");
+                } else {
+                    modalError("danger", data.error);
+                };
+            })
+            .fail((_, textStatus) => {
+                modalError("danger", textStatus);
+            });
+        };
+
+        setTimeout(function() { debounce = false }, 3400);
     });
 });
