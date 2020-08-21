@@ -1,7 +1,7 @@
-function modalError(type, errorText) {
+function modalAlert(type, errorText) {
     $("#requestModal .modal-body").append(`
         <div class="alert alert-${type}" role="alert">
-            An Error Occured: ${errorText}
+            ${type == "danger" ? "An Error Occured:" : "Success!"}: ${errorText}
         </div>
     `);
 
@@ -48,11 +48,11 @@ $(document).ready(function() {
             request_message = $("#request-message").val();
 
         if (!["shoutout", "play"].includes(request_type)) {
-            modalError("danger", "Please select a request type!");
+            modalAlert("danger", "Please select a request type!");
         } else if (request_name.length < 3) {
-            modalError("danger", "Please enter a longer name! (Atleast 3 characters.)");
+            modalAlert("danger", "Please enter a longer name! (Atleast 3 characters.)");
         } else if (request_message.length < 10) {
-            modalError("danger", "Please enter a longer message! (Atleast 10 characters.)");
+            modalAlert("danger", "Please enter a longer message! (Atleast 10 characters.)");
         } else {
             $.ajax({
                 type: "POST",
@@ -63,13 +63,13 @@ $(document).ready(function() {
             })
             .done(data => {
                 if (data.success) {
-                    modalError("success", "Successfully Sent!");
+                    modalAlert("success", "Successfully sent your request!");
                 } else {
-                    modalError("danger", data.error);
+                    modalAlert("danger", data.error);
                 };
             })
             .fail((_, textStatus) => {
-                modalError("danger", textStatus);
+                modalAlert("danger", textStatus);
             });
         };
 
