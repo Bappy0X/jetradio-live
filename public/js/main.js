@@ -17,7 +17,6 @@ function modalAlert(type, errorText) {
 function updateStats() {
     $.ajax("https://listen.jetradio.live/status-json.xsl")
     .done(data => {
-        console.log(data);
         if (!data.icestats.source || data.icestats.source.length <= 0) {
             $("#live-status")
                 .html("OFFLINE.")
@@ -30,6 +29,25 @@ function updateStats() {
     })
     .fail((_, textStatus) => {
         console.error(`Radio status GET failed: "${textStatus}".`);
+    });
+
+    $.ajax("https://api.bappy0x.tk/jetradio/currentevent")
+    .done(data => {
+        console.log(data);
+        if (!data.event) {
+            $("#live-host-img").attr("src", "https://jetradio.live/public/img/img.png");
+            $("#live-host-name").html("Nobody!");
+            $("#live-host-times").html("The next event will start soon...");
+            $("#live-feature").html("None.");
+        } else {
+            $("#live-host-img").attr("src", data.event.image);
+            $("#live-host-name").html(data.event.name);
+            $("#live-host-times").html(`From ${data.event.timeStart} to ${data.event.timeEnd}`);
+            $("#live-feature").html(data.event.feature.toUpperCase());
+        }
+    })
+    .fail((_, textStatus) => {
+        console.error(`Current Event GET failed: "${textStatus}".`);
     });
 }
 

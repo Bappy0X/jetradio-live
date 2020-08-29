@@ -38,19 +38,14 @@ html, body {
     padding-left: 0;
 }
 
-a{
+a {
     color: white !important;
 }
-._navbar>li>a.active{
-    border-bottom: 2px solid white;
+._navbar>li>a.active {
+    text-decoration: underline;
 }
-._navbar>li>a:not(.active){
+._navbar>li>a:not(.active) {
     color: #c0c0c0 !important;
-}
-a:hover:not(i .fa) {
-    text-decoration: none !important;
-    border-bottom: 2px solid white;
-    color: white;
 }
 
 .song-cover {
